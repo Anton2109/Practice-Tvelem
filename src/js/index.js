@@ -159,19 +159,18 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-/* Валидация формы */ 
+/* Валидация формы */
 
-import JustValidate from 'just-validate';
+import JustValidate from "just-validate";
 
-document.addEventListener('DOMContentLoaded', () => {
-  
-  const validator = new JustValidate('.form-container__form', {
-    errorFieldCssClass: 'form-container__input--error',
-    errorLabelCssClass: 'form-container__error-label',
+document.addEventListener("DOMContentLoaded", () => {
+  const validator = new JustValidate(".form-container__form", {
+    errorFieldCssClass: "form-container__input--error",
+    errorLabelCssClass: "form-container__error-label",
     errorLabelStyle: {
-      color: '#ff4d4f',
+      color: "#ff4d4f",
     },
-    successFieldCssClass: 'form-container__input--success',
+    successFieldCssClass: "form-container__input--success",
     focusInvalidField: true,
     lockForm: true,
     validateBeforeSubmitting: true,
@@ -180,63 +179,75 @@ document.addEventListener('DOMContentLoaded', () => {
 
   validator.addField('.form-container__input[name="name"]', [
     {
-      rule: 'required',
-      errorMessage: 'Введите имя',
+      rule: "required",
+      errorMessage: "Введите имя",
     },
     {
-      rule: 'minLength',
+      rule: "minLength",
       value: 2,
-      errorMessage: 'Минимум 2 символа',
+      errorMessage: "Минимум 2 символа",
     },
   ]);
 
   validator.addField('.form-container__input[name="phone"]', [
     {
-      rule: 'required',
-      errorMessage: 'Введите телефон',
+      rule: "required",
+      errorMessage: "Введите телефон",
     },
     {
-      rule: 'number',
-      errorMessage: 'Только цифры',
+      rule: "number",
+      errorMessage: "Только цифры",
     },
     {
-      rule: 'minLength',
+      rule: "minLength",
       value: 10,
-      errorMessage: 'Минимум 10 цифр',
-    },
-  ]);
- 
-  validator.addField('.form-container__input[name="email"]', [
-    {
-      rule: 'required',
-      errorMessage: 'Введите email',
-    },
-    {
-      rule: 'email',
-      errorMessage: 'Введите email в формате: имя@домен.ру',
-    },
-  ]);
- 
-  validator.addField('.form-container__input[name="question"]', [
-    {
-      rule: 'required',
-      errorMessage: 'Введите запрос',
-    },
-    {
-      rule: 'minLength',
-      value: 10,
-      errorMessage: 'Минимум 10 символов',
+      errorMessage: "Минимум 10 цифр",
     },
   ]);
 
-  validator.addField('#checkbox1', [
+  validator.addField('.form-container__input[name="email"]', [
     {
-      rule: 'required',
-      errorMessage: 'Необходимо согласие',
+      rule: "required",
+      errorMessage: "Введите email",
+    },
+    {
+      rule: "email",
+      errorMessage: "Введите email в формате: имя@домен.ру",
+    },
+  ]);
+
+  validator.addField('.form-container__input[name="question"]', [
+    {
+      rule: "required",
+      errorMessage: "Введите запрос",
+    },
+    {
+      rule: "minLength",
+      value: 10,
+      errorMessage: "Минимум 10 символов",
+    },
+  ]);
+
+  validator.addField("#checkbox1", [
+    {
+      rule: "required",
+      errorMessage: "Необходимо согласие",
     },
   ]);
 
   validator.onSuccess((e) => {
-    alert('Форма отправлена'); 
+    alert("Форма отправлена");
+    e.target.reset();
+
+    const checkbox = document.getElementById('checkbox1');
+  if (checkbox) {
+    checkbox.checked = false;
+
+    const label = document.querySelector('.form-container__checkbox__label');
+    if (label) label.classList.remove('checked');
+  }
+
+    const fileInput = document.querySelector('input[type="file"]');
+    if (fileInput) fileInput.value = "";
   });
 });
