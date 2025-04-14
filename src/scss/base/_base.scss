@@ -1,0 +1,11 @@
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+	background-color: rgb(182, 182, 182, 0.5);
+	width: 1440px;
+	margin: 0 auto;
+	overflow-y: scroll;
+}

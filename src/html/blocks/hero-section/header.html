@@ -1,0 +1,107 @@
+<header class="main-header">
+    <div class="main-header__container">
+        <nav class="main-header__nav">
+            <div class="main-header__content">
+
+                <a href="/" class="main-header__logo">
+                    <div class="main-header__logo-img"></div>
+                </a>
+
+                <div class="main-header__location">
+                    <span class="main-header__icon main-header__icon--pin"></span>
+                    <span class="main-header__city">Тверь</span>
+                    <span class="main-header__icon main-header__icon--arrow"></span>
+
+                    <div class="main-header__address-popup">
+                        <div class="main-header__address-list">
+
+                            <h1 class="main-header__address-title">Адреса</h1>
+
+                            <span class="main-header__close-popup"></span>
+
+                            <div class="main-header__address-item active" data-city="Тверь">
+                                <div class="main-header__address-check"></div>
+                                <div class="main-header__address-text">
+                                    <div class="main-header__address-city">г. Тверь</div>
+                                    <div class="main-header__address-street">ул. Макарова, д. 91, пом.2</div>
+                                </div>
+                            </div>
+
+                            <div class="main-header__address-item" data-city="Москва"
+                                data-address="ул. Макарова, д. 91, пом.2">
+                                <div class="main-header__address-check"></div>
+                                <div class="main-header__address-text">
+                                    <div class="main-header__address-city">г. Москва</div>
+                                    <div class="main-header__address-street">ул. Макарова, д. 91, пом.2</div>
+                                </div>
+                            </div>
+
+                            <div class="main-header__address-item" data-city="Санкт-Петербург"
+                                data-address="ул. Макарова, д. 91, пом.2">
+                                <div class="main-header__address-check"></div>
+                                <div class="main-header__address-text">
+                                    <div class="main-header__address-city">г. Санкт-Петербург</div>
+                                    <div class="main-header__address-street">ул. Макарова, д. 91, пом.2</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="main-header__address-button">Выбрать адрес</button>
+                    </div>
+                </div>
+
+                <div class="main-header__address">ул. Макарова, д. 91, пом.2</div>
+
+                <div class="main-header__phone">
+                    <a href="tel:+79051641441" class="main-header__phone-link">+7(905) 164-14-41</a>
+                </div>
+
+                <ul class="main-header__menu">
+                    <li class="main-header__menu-item main-header__menu-item--dropdown">
+                        <a href="#" class="main-header__menu-link">Каталог</a>
+                        <span class="main-header__icon main-header__icon--arrow"></span>
+
+                        <div class="catalog-dropdown">
+                            <ul class="catalog-dropdown__list">
+                                <li class="catalog-dropdown__item">
+                                    <a href="#" class="catalog-dropdown__link">Элементы для шкафов оперативного тока</a>
+                                </li>
+                                <li class="catalog-dropdown__item">
+                                    <a href="#" class="catalog-dropdown__link">Датчики токов утечки</a>
+                                </li>
+                                <li class="catalog-dropdown__item">
+                                    <a href="#" class="catalog-dropdown__link">Токовые пробники</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="main-header__menu-item">
+                        <a href="#" class="main-header__menu-link">О компании</a>
+                    </li>
+                    <li class="main-header__menu-item">
+                        <a href="#" class="main-header__menu-link">Статьи</a>
+                    </li>
+                    <li class="main-header__menu-item">
+                        <a href="#" class="main-header__menu-link">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="main-header__search">
+                    <div class="search-container">
+                        <button class="main-header__search-btn" type="button">
+                            <span class="main-header__icon main-header__icon--search"></span>
+                            <span class="main-header__icon main-header__icon--close" style="display: none;"></span>
+                        </button>
+                        <div class="main-header__search-popup">
+                            <input type="text" class="main-header__search-input" placeholder="Поиск...">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</header>
+<div class="overlay"></div>
+<!-- @@include('mobile-nav.html') -->

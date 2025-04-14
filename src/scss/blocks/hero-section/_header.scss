@@ -1,0 +1,453 @@
+.main-header {
+  color: #fff;
+  padding-top: 50px;
+  margin-bottom: 110px;
+
+  &__container {
+    width: 1200px;
+  }
+
+  &__search {
+    position: relative;
+  }
+
+  &__search-popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 78px;
+    transform: translateY(-50%);
+    width: 935px;
+    height: 60px;
+    background: #fff;
+    border-radius: 30px;
+    padding: 0 20px;
+    z-index: 1002;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  &__search-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    color: #333;
+    padding-right: 30px;
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+
+  &__icon--close {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    mask-image: url("../../../../img/favicons/closePopup.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+
+  &__search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    padding-right: 50px;
+    &-img {
+      background-image: url("../../../img/header-logo.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 125px;
+      height: 45px;
+      display: block;
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    width: auto;
+    min-width: 110px;
+    max-width: 180px;
+
+    &:hover {
+      .main-header__icon--arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__address-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 345px;
+    background: #fff;
+    border-radius: 25px;
+    padding: 25px;
+    z-index: 1001;
+  }
+
+  &__address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__address-title {
+    color: #333;
+    font-family: "Gilroy", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__close-popup {
+    position: absolute;
+    top: 27px;
+    right: 21px;
+    cursor: pointer;
+    color: #333;
+    transition: transform 0.3s ease;
+
+    background-image: url("../../../../img/favicons/closePopup.svg");
+    background-repeat: no-repeat;
+
+    width: 17px;
+    height: 17px;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+
+  &__address-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+
+  &__address-check {
+    border: 1px solid rgb(39, 47, 106);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &::after {
+      content: "✓";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .active & {
+      background-color: rgb(39, 47, 106);
+      border-color: rgb(39, 47, 106);
+    }
+  }
+
+  &__address-text {
+    color: #333;
+  }
+
+  &__address-city {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  &__address-street {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .active &__address-check::after {
+    opacity: 1;
+  }
+
+  &__address-button {
+    width: 330px;
+    height: 50px;
+    border-radius: 46px;
+    background-color: rgb(39, 47, 106);
+    color: #fff;
+
+    font-family: "Gilroy", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 20px 25px 25px 25px;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgb(19, 28, 98);
+    }
+  }
+
+  &__city {
+    white-space: nowrap;   
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80px;
+    display: inline-block;
+    vertical-align: middle;
+
+    padding: 0 7px 0 15px;
+
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__address {
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+
+    padding-right: 50px;
+  }
+
+  &__phone {
+    padding-right: 70px;
+
+    &-link {
+      color: #fff;
+      text-decoration: none;
+
+      font-family: "Gilroy", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: 25px;
+    padding-right: 70px;
+
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    &-item {
+      &--dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        &:hover {
+          .catalog-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(10px);
+          }
+
+          .main-header__icon--arrow {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    &-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ccc;
+      }
+    }
+  }
+
+  &__icon {
+    &--search {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__icon {
+    &--pin,
+    &--arrow,
+    &--search {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-size: contain;
+    }
+
+    &--pin {
+      background-image: url("../../../img/favicons/locationHeader.svg");
+      background-repeat: no-repeat;
+
+      width: 12px;
+      height: 16px;
+    }
+
+    &--arrow {
+      cursor: pointer;
+      background-image: url("../../../img/favicons/arrowHeader.svg");
+      background-repeat: no-repeat;
+
+      width: 10px;
+      height: 5px;
+
+      transition: transform 0.3s ease;
+    }
+
+    &--search {
+      background-image: url("../../../img/favicons/seacrhHeader.svg");
+      background-repeat: no-repeat;
+
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+.catalog-dropdown {
+  box-sizing: border-box;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 180px;
+  height: 122px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 100;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    padding-bottom: 10px;
+    &:hover {
+      background: #fff;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    font-family: "Gilroy", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.25;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.main-header__search-popup {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: none;
+}
+
+.main-header__search-popup.show {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+}
+
+.main-header__address-popup {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  visibility: hidden;
+}
+
+.main-header__address-popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  visibility: hidden;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}

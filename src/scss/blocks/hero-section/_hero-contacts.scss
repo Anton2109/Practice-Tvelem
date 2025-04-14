@@ -1,0 +1,66 @@
+.contacts {
+  margin-top: 45px;
+  width: 100%;
+  border-radius: 0 0 25px 25px;
+  background-color: rgb(39, 47, 106);
+  z-index: 1;
+
+  &__container {
+    padding: 0 130px;
+    height: 141px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__description {
+    font-family: "Gilroy", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #fff;
+    margin: 0;
+  }
+
+  &__divider {
+    height: 81px;
+    width: 1px;
+    background-color: #fff;
+    margin: 0 80px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 40px;
+    flex-shrink: 0;
+  }
+
+  &__item {
+    font-family: "Gilroy", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  &__button {
+    width: 180px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 45px;
+    background-color: #fff;
+    color: rgb(39, 47, 106);
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: rgb(39, 47, 106);
+      color: #fff;
+    }
+  }
+}

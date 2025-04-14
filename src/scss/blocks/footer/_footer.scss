@@ -1,0 +1,152 @@
+.footer {
+  background-color: #fff;
+  padding: 45px 130px 48px 130px;
+
+  &__icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+
+    &--location {
+      background-image: url("../../../img/favicons/footer/footerLocation.svg");
+    }
+
+    &--clock {
+      background-image: url("../../../img/favicons/footer/footerClock.svg");
+    }
+
+    &--phone {
+      background-image: url("../../../img/favicons/footer/footerPhone.svg");
+    }
+
+    &--email {
+      background-image: url("../../../img/favicons/footer/footerEmail.svg");
+      margin-top: 5px;
+    }
+  }
+
+  &__logo {
+    &-img {
+      background-image: url("../../../img/favicons/footer/footerLogo.svg");
+      width: 125px;
+      height: 45px;
+    }
+  }
+
+  &__company-info {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    &-item {
+      color: #333;
+      font-family: "Gilroy", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  &__products {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 21px;
+    padding-left: 147px;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+
+    &-text {
+      padding-right: 35px;
+    }
+
+    &-text:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__contact-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__products {
+    display: flex;
+    gap: 21px;
+    padding-left: 107px;
+  }
+
+  &__product-link {
+    white-space: nowrap;
+    color: #333;
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  &__links {
+    display: flex;
+    gap: 21px;
+    padding-left: 81px;
+  }
+
+  &__link {
+    color: #333;
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  &__legal {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 117px;
+
+    &-item {
+      opacity: 0.5;
+      color: #333;
+      font-family: "Gilroy", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+
+      &:first-child {
+        justify-self: start;
+      }
+
+      &:nth-child(2) {
+        justify-self: end;
+      }
+
+      &:last-child {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.footer__company {
+  display: flex;
+  padding: 30px 0 80px 0;
+}

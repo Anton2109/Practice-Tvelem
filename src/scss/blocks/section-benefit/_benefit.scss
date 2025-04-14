@@ -1,0 +1,135 @@
+.benefit {
+  width: 1180px;
+  margin: 0 130px 0 130px;
+}
+
+.benefit-container {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+  &__divider {
+    background-color: rgb(39, 47, 106);
+    width: 4px;
+    height: 32px;
+    margin-right: 15px;
+  }
+  &__title {
+    color: #333;
+    font-family: "Gilroy", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 120%;
+  }
+}
+
+.benefit-cards {
+  display: flex;
+  gap: 20px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 28px 0 35px 27px;
+    background-color: #fff;
+    border-radius: 25px;
+    width: 280px;
+    height: 164px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+
+    &--color {
+      background-color: var(--color-accent);
+      color: #fff;
+    }
+
+    &:hover {
+      .benefit-cards__icon {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+
+      .benefit-cards__subtitle,
+      .benefit-cards__subtitle--blue {
+        transform: translateY(-110px);
+      }
+
+      .benefit-cards__description {
+        opacity: 1;
+        transform: translateY(-40px);
+      }
+    }
+  }
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    transition: all 0.4s ease;
+    margin-bottom: 20px;
+
+    &--experience {
+      background-image: url("../../../img/favicons/section-benefit/Layer1.svg");
+      background-repeat: no-repeat;
+    }
+    &--quality {
+      background-image: url("../../../img/favicons/section-benefit/Layer2.svg");
+      background-repeat: no-repeat;
+    }
+    &--specs {
+      background-image: url("../../../img/favicons/section-benefit/Layer3.svg");
+      background-repeat: no-repeat;
+    }
+    &--help {
+      background-image: url("../../../img/favicons/section-benefit/Layer4.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__subtitle {
+    font-family: "Gilroy", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    width: 184px;
+    height: 58px;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+
+    &--blue {
+      font-family: "Gilroy", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.2;
+      width: 184px;
+      height: 58px;
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 2;
+      color: var(--color-accent);
+    }
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 5px;
+    left: 27px;
+    width: 224px;
+    height: 84px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.33;
+
+    .benefit-cards__wrapper--color & {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+}

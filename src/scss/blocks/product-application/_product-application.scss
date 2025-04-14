@@ -1,0 +1,89 @@
+.product-application {
+  margin: 120px 150px 0 130px;
+  width: 1160px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__divider {
+    background-color: rgb(39, 47, 106);
+    width: 4px;
+    height: 32px;
+    margin-right: 15px;
+  }
+
+  &__title {
+    font-family: "Gilroy", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+  }
+
+  &__description {
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    width: 532px;
+    height: 100px;
+  }
+
+  &__image {
+    width: 580px;
+    height: 421px;
+  }
+
+  &__text-block--right {
+    width: 532px;
+    height: 321px;
+    margin-right: 50px;
+  }
+
+  &__text-block--left {
+    width: 532px;
+    height: 306px;
+    margin-left: 35px;
+  }
+
+  &__subtitle {
+    color: rgb(39, 47, 106);
+    font-family: "Gilroy", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 46px;
+    padding-bottom: 15px;
+  }
+
+  &__text {
+    color: #333;
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    margin-bottom: 10px;
+  }
+
+  &__text:last-child {
+    margin-bottom: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 35px;
+  }
+
+  &__item {
+    display: flex;
+
+    &--left {
+    }
+
+    &--right {
+      flex-direction: row-reverse;
+    }
+  }
+}

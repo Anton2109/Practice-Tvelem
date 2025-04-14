@@ -1,0 +1,43 @@
+.hero-section {
+  position: relative;
+  min-height: 740px;
+  display: flex;
+  margin-bottom: 120px;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../../img/header-background.png") center/cover no-repeat;
+    border-radius: 0 0 25px 25px;
+    z-index: -1;
+  }
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 130px;
+  position: relative;
+  z-index: 2;
+  flex-grow: 1;
+
+  & > * {
+    box-sizing: content-box;
+  }
+}
+
+.contacts {
+  margin: -45px 0 0 0;
+  width: 100%;
+  height: 141px;
+  border-radius: 0 0 25px 25px;
+  background-color: rgb(39, 47, 106);
+  position: relative;
+  z-index: 2;
+}

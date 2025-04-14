@@ -1,0 +1,29 @@
+/* Base */
+@use './base/reset';
+@use './base/vars';
+@use './base/mixins';
+@use './base/fontsAutoGen';
+@use './base/base';
+@use './base/utils';
+@use './base/containers';
+@use './base/sticky-footer';
+
+/* Blocks */
+@use './blocks/hero-section/header.scss';
+
+@use './blocks/hero-section/hero-section.scss';
+
+@use './blocks/hero-section/hero-content.scss';
+
+@use './blocks/hero-section/hero-contacts.scss';
+
+@use './blocks/popular-products/popular-products.scss';
+
+@use './blocks/section-benefit/benefit.scss';
+
+@use './blocks/product-application/product-application.scss';
+
+@use './blocks/section-form/form.scss';
+
+@use './blocks/footer/footer.scss';
+
