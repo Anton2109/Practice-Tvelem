@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Твелем</title>
+    <link rel="stylesheet" href="./css/main.css" />
+
+</head>
+
+<body class="page-product-card">
+    <div class="container">
+
+        <section class="header">
+            @@include('blocks/index-page/hero-section/header.html')
+        </section>
+
+        <section class="card-specifications">
+            @@include('blocks/product-card/card-specifications/card-specifications.html')
+        </section>
+
+        <section class="about-card">
+            @@include('blocks/product-card/about-card/index.html')
+        </section>
+
+        <section class="section-contacts">
+
+            <div class="contacts">
+
+                <div class="contacts__container">
+                    @@include('blocks/index-page/hero-section/hero-contacts.html')
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="another-products">
+            @@include('blocks/product-card/another-products/another-products.html')
+        </section>
+
+        <section class="form">
+            @@include('blocks/index-page/section-form/index.html')
+        </section>
+
+        @@include('blocks/index-page/footer/footer.html')
+        <script src="./js/productCard.bundle.js"></script>
+    </div>
+</body>
+
+</html>

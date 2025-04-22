@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Твелем</title>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body class="page-product-card">
+		<div class="container">
+			<section class="header">
+				<header class="main-header">
+					<div class="main-header__container">
+						<nav class="main-header__nav">
+							<div class="main-header__content">
+								<a href="/" class="main-header__logo">
+									<div class="main-header__logo-img"></div>
+								</a>
+
+								<div class="main-header__location">
+									<span class="main-header__icon main-header__icon--pin"></span>
+									<span class="main-header__city">Тверь</span>
+									<span class="main-header__icon main-header__icon--arrow"></span>
+
+									<div class="main-header__address-popup">
+										<div class="main-header__address-list">
+											<h1 class="main-header__address-title">Адреса</h1>
+
+											<span class="main-header__close-popup"></span>
+
+											<div class="main-header__address-item active" data-city="Тверь">
+												<div class="main-header__address-check"></div>
+												<div class="main-header__address-text">
+													<div class="main-header__address-city">г. Тверь</div>
+													<div class="main-header__address-street">ул. Макарова, д.&#160;91, пом.2</div>
+												</div>
+											</div>
+
+											<div class="main-header__address-item" data-city="Москва" data-address="ул. Макарова, д. 91, пом.2">
+												<div class="main-header__address-check"></div>
+												<div class="main-header__address-text">
+													<div class="main-header__address-city">г. Москва</div>
+													<div class="main-header__address-street">ул. Макарова, д.&#160;91, пом.2</div>
+												</div>
+											</div>
+
+											<div class="main-header__address-item" data-city="Санкт-Петербург" data-address="ул. Макарова, д. 91, пом.2">
+												<div class="main-header__address-check"></div>
+												<div class="main-header__address-text">
+													<div class="main-header__address-city">г. Санкт-Петербург</div>
+													<div class="main-header__address-street">ул. Макарова, д.&#160;91, пом.2</div>
+												</div>
+											</div>
+										</div>
+
+										<button class="main-header__address-button">Выбрать адрес</button>
+									</div>
+								</div>
+
+								<div class="main-header__address">ул. Макарова, д.&#160;91, пом.2</div>
+
+								<div class="main-header__phone">
+									<a href="tel:+79051641441" class="main-header__phone-link">+7&#160;905&#160;164-14-41</a>
+								</div>
+
+								<ul class="main-header__menu">
+									<li class="main-header__menu-item main-header__menu-item--dropdown">
+										<a href="#" class="main-header__menu-link">Каталог</a>
+										<span class="main-header__icon main-header__icon--arrow"></span>
+
+										<div class="catalog-dropdown">
+											<ul class="catalog-dropdown__list">
+												<li class="catalog-dropdown__item">
+													<a href="#" class="catalog-dropdown__link">Элементы для шкафов оперативного тока</a>
+												</li>
+												<li class="catalog-dropdown__item">
+													<a href="#" class="catalog-dropdown__link">Датчики токов утечки</a>
+												</li>
+												<li class="catalog-dropdown__item">
+													<a href="#" class="catalog-dropdown__link">Токовые пробники</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="main-header__menu-item">
+										<a href="#" class="main-header__menu-link">О&#160;компании</a>
+									</li>
+									<li class="main-header__menu-item">
+										<a href="#" class="main-header__menu-link">Статьи</a>
+									</li>
+									<li class="main-header__menu-item">
+										<a href="#" class="main-header__menu-link">Контакты</a>
+									</li>
+								</ul>
+
+								<div class="main-header__search">
+									<div class="search-container">
+										<button class="main-header__search-btn" type="button">
+											<span class="main-header__icon main-header__icon--search"></span>
+											<span class="main-header__icon main-header__icon--close" style="display: none;"></span>
+										</button>
+										<div class="main-header__search-popup">
+											<input type="text" class="main-header__search-input" placeholder="Поиск..." />
+										</div>
+									</div>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</header>
+				<div class="overlay"></div>
+			</section>
+
+			<section class="card-specifications">
+				<div class="product-card">
+					<div class="product-card__container container">
+						<div class="product-card__main">
+							<div class="product-card__gallery">
+								<picture>
+									<source srcset="./img/product-card/bigLayer.webp 1x, ./img/product-card/bigLayer@2x.webp 2x" type="image/webp" />
+									<source srcset="./img/product-card/bigLayer.png 1x, ./img/product-card/bigLayer@2x.png 2x" type="image/png" />
+									<img src="./img/product-card/bigLayer.png" alt="Датчик токов утечки SLD1-100mА" class="product-card__image" />
+								</picture>
+							</div>
+
+							<div class="product-card__info">
+								<h1 class="product-card__title">
+									Датчик токов утечки <br />
+									SLD1-100mА
+								</h1>
+
+								<div class="product-card__specs">
+									<ul class="specs-list">
+										<li class="specs-list__item">
+											<span class="specs-list__name">Производитель</span>
+											<span class="specs-list__value">3E sensor\LDTN</span>
+										</li>
+										<li class="specs-list__item">
+											<span class="specs-list__name">Измеряемый ток</span>
+											<span class="specs-list__value">0&#8230; &#177; 5 В</span>
+										</li>
+										<li class="specs-list__item">
+											<span class="specs-list__name">Номинальный входной ток</span>
+											<span class="specs-list__value">10 мА</span>
+										</li>
+										<li class="specs-list__item">
+											<span class="specs-list__name">Диапазон преобразования</span>
+											<span class="specs-list__value">&#177;15 мА</span>
+										</li>
+										<li class="specs-list__item">
+											<span class="specs-list__name">Рабочая температура</span>
+											<span class="specs-list__value">&#8212;&#160;10 . + 70 &#176;C</span>
+										</li>
+										<li class="specs-list__item">
+											<span class="specs-list__name">Напряжение питания</span>
+											<span class="specs-list__value">&#177; 15 В</span>
+										</li>
+										<li class="specs-list__item">
+											<span class="specs-list__name">Выходной сигнал</span>
+											<span class="specs-list__value">Пропорциональное напряжение</span>
+										</li>
+									</ul>
+								</div>
+
+								<div class="product-card__actions">
+									<button type="button" class="product-card__button product-card__button--primary">Оставить заявку</button>
+									<button type="button" class="product-card__button product-card__button--secondary">Скачать DATASHEET</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about-card">
+				<div class="about-card">
+					<div class="about-card__content">
+						<div class="about-card__header">
+							<div class="about-card__divider"></div>
+							<h1 class="about-card__title about-card__title--main">Описание</h1>
+						</div>
+
+						<p class="about-card__text">
+							Датчик дифференциального тока (тока утечки) SLD1-100mA предназначен для электронного преобразования низкоуровневого (разностного) постоянного тока
+							в&#160;пропорциональный выходной сигнал с&#160;гальванической развязкой между первичной (силовой) и&#160;вторичной (измерительной) цепями.
+						</p>
+					</div>
+
+					<div class="about-card__wrapper">
+						<div class="about-card__section">
+							<div class="about-card__section-content">
+								<h2 class="about-card__subtitle">Особенности</h2>
+								<ul class="about-card__list">
+									<li class="about-card__item">Датчик для преобразования постоянного тока</li>
+									<li class="about-card__item">Низкие величины номинальных токов</li>
+									<li class="about-card__item">Разработан для установки на&#160;шасси</li>
+									<li class="about-card__item">Напряжение питания &#177; 12&#8230;&#177; 15B</li>
+									<li class="about-card__item">Vd&#160;= 3.0 кВ</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="about-card__section">
+							<div class="about-card__section-content">
+								<h2 class="about-card__subtitle">Применение</h2>
+								<ul class="about-card__list">
+									<li class="about-card__item">Цепи контроля утечки постоянного тока</li>
+									<li class="about-card__item">Дифференциальные измерения в&#160;цепях постоянного тока</li>
+									<li class="about-card__item">Слаботочные цепи постоянного тока</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="about-card__section">
+							<div class="about-card__section-content">
+								<h2 class="about-card__subtitle">Преимущества</h2>
+								<ul class="about-card__list">
+									<li class="about-card__item">Высокий уровень изоляции между первичной и&#160;вторичной цепями</li>
+									<li class="about-card__item">Высокая степень защищенности против электромагнитных помех</li>
+									<li class="about-card__item">Лёгок в&#160;установке</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section-contacts">
+				<div class="contacts">
+					<div class="contacts__container">
+						<div class="contacts">
+							<div class="contacts__container">
+								<p class="contacts__description">
+									Чтобы оформить заказ или получить консультацию, свяжитесь с&#160;нами любым удобным для Вас способом
+								</p>
+
+								<div class="contacts__divider"></div>
+
+								<div class="contacts__items">
+									<a href="#" class="contacts__item contacts__phone">
+										+7&#160;905&#160;164-14-41
+									</a>
+
+									<a href="#" class="contacts__item contacts__email">
+										info@tvelem.ru
+									</a>
+								</div>
+
+								<button class="contacts__button button--primary">
+									Отправить запрос
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="another-products">
+				<div class="another-products__container">
+					<div class="another-products__content">
+						<div class="another-products__header">
+							<div class="another-products__divider"></div>
+							<h1 class="another-products__title another-products__title--main">Описание</h1>
+						</div>
+					</div>
+
+					<div class="another-products-wrapper">
+						<ul class="another-products__cards">
+							<li class="another-products__card">
+								<a href="#" class="another-products card--locker">
+									<span class="card__title">Элементы для шкафов оперативного тока</span>
+									<span class="card__more">Подробнее</span>
+								</a>
+							</li>
+
+							<li class="hero__card">
+								<a href="#" class="card card--light">
+									<span class="card__title">Датчики токов утечки</span>
+									<span class="card__more">Подробнее</span>
+								</a>
+							</li>
+
+							<li class="hero__card">
+								<a href="#" class="card card--breaker">
+									<span class="card__title">Токовые пробники</span>
+									<span class="card__more">Подробнее</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="form">
+				<div class="form-container">
+					<div class="form-container__wrapper">
+						<div class="form-container__divider"></div>
+
+						<div class="form-container__left">
+							<div class="form-container__header">
+								<h1 class="form-container__title">
+									Свяжитесь со&#160;<br />
+									специалистом
+								</h1>
+
+								<div class="form-container__info">
+									<p class="form-container__description">
+										Заполните форму или свяжитесь с&#160;нами любым другим способом.
+									</p>
+
+									<p class="form-container__description--second">
+										Бесплатно консультируем по&#160;всем вопросам, связанным с&#160;нашей продукцией!
+									</p>
+
+									<a href="#" class="form-container__contact">
+										+7&#160;905&#160;164-14-41
+									</a>
+
+									<a href="#" class="form-container__contact">
+										info@tvelem.ru
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-container__form-wrapper">
+						<form class="form-container__form">
+							<div class="form-container__field">
+								<input class="form-container__input" placeholder="Ваше имя*" type="text" name="name" required />
+							</div>
+
+							<div class="form-container__field">
+								<input class="form-container__input form-container__input--phone" placeholder="Телефон*" type="text" name="phone" id="formPhone" required />
+							</div>
+
+							<div class="form-container__field">
+								<input class="form-container__input" placeholder="E-mail*" type="email" name="email" required />
+							</div>
+
+							<div class="form-container__field form-container__field--wrapper">
+								<input class="form-container__input" placeholder="Ваш запрос" type="text" name="question" required />
+							</div>
+
+							<div class="form-container__file-pload">
+								<div class="form-container__upload-wrapper">
+									<input type="file" class="form-container__button--file" style="display: none;" id="fileInput" />
+									<label for="fileInput" class="form-container__button--file">Выбрать файл</label>
+									<span class="form-container__icon form-container__icon--clip"></span>
+								</div>
+
+								<p class="form-container__file-info">Можно прикрепить к&#160;форме файл до&#160;25 МБ</p>
+
+								<div class="form-container__checkbox">
+									<input type="checkbox" class="form-container__checkbox__input" id="checkbox1" />
+									<label class="form-container__checkbox__label" for="checkbox1"></label>
+									<p class="form-container__agreement-text">
+										Я&#160;согласен с
+										<a class="form-container__agreement-text--link" href="#!">политикой конфиденциальности</a>
+									</p>
+								</div>
+							</div>
+
+							<button class="form-container__submit-button" type="submit">Отправить заявку</button>
+						</form>
+					</div>
+
+					<div class="modal" id="successModal">
+						<div class="modal__content">
+							<div class="modal__content--wrapper">
+								<h2 class="modal__title">Ваша заявка отправлена</h2>
+								<span class="modal__close--icon"></span>
+							</div>
+							<div class="modal__text-wrapper">
+								<p class="modal__text">Мы&#160;уже получили вашу заявку, и&#160;в&#160;ближайшее время</p>
+								<p class="modal__text modal__text--centered">свяжемся с&#160;вами!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="footer">
+				<div class="footer__logo">
+					<div class="footer__logo-img"></div>
+				</div>
+
+				<div class="footer__company">
+					<div class="footer__company-info">
+						<p class="footer__company-info-item">ООО&#160;&#171;Твелем&#187;</p>
+						<p class="footer__company-info-item">ИНН: 6900002442</p>
+						<p class="footer__company-info-item">ОГРН: 1236900012040</p>
+					</div>
+
+					<div class="footer__contacts">
+						<div class="footer__contact">
+							<span class="footer__icon footer__icon--location"></span>
+							<span class="footer__contact-text">Тверь ул.&#160;Макарова, д.&#160;91, пом.2</span>
+						</div>
+
+						<div class="footer__contact">
+							<span class="footer__icon footer__icon--clock"></span>
+							<span class="footer__contact-text">Пн-Чт с&#160;09.00 до&#160;18.00 | Пт&#160;с&#160;09.00 до&#160;17.00</span>
+						</div>
+
+						<div class="footer__contact">
+							<div class="footer__contact-wrapper">
+								<span class="footer__icon footer__icon--phone"></span>
+								<a href="#" class="footer__contact-text">+7&#160;905&#160;164-14-41</a>
+
+								<span class="footer__icon footer__icon--email"></span>
+								<a href="#" class="footer__contact-text">info@tvelem.ru</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer__products">
+						<a href="#!" class="footer__product-link">Элементы для шкафов оперативного тока</a>
+						<a href="#!" class="footer__product-link">Датчики токов утечки</a>
+						<a href="#!" class="footer__product-link">Токовые пробники</a>
+					</div>
+
+					<div class="footer__links">
+						<a href="#!" class="footer__link">Статьи</a>
+						<a href="#!" class="footer__link">Гарантии</a>
+					</div>
+				</div>
+
+				<div class="footer__legal">
+					<p class="footer__legal-item">&#169; ООО&#160;&#171;Твелем&#187; 2024</p>
+					<p class="footer__legal-item">Политика конфиденциальности</p>
+					<p class="footer__legal-item">Сделано в&#160;DSML</p>
+				</div>
+			</div>
+			<script src="./js/productCard.bundle.js"></script>
+		</div>
+	</body>
+</html>

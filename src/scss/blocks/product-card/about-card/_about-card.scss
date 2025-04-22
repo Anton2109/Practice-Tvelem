@@ -1,0 +1,73 @@
+.about-card {
+    margin-bottom: 120px;
+  &__content {
+    margin-bottom: 40px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__divider {
+    background-color: rgb(39, 47, 106);
+    width: 4px;
+    height: 32px;
+    margin-right: 15px;
+  }
+
+  &__title {
+    color: #333;
+    font-family: "Gilroy", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+  }
+
+  &__text {
+    color: #333;
+    font-family: "Gilroy", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.53;
+    max-width: 581px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__section {
+    box-sizing: border-box;
+    padding: 28px 28px 27px 17px;
+    width: 380px;
+    min-height: 244px;
+
+    border-radius: 25px;
+    background-color: #fff;
+  }
+
+  &__subtitle {
+    color: rgb(39, 47, 106);
+    font-family: "Gilroy", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__item {
+    list-style-type: disc;
+    color: rgb(39, 47, 106);
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+  }
+}

@@ -10,7 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmButton = document.querySelector(".main-header__address-button");
   const closeButton = document.querySelector(".main-header__close-popup");
 
-  if (locationBlock && popup && cityElement && addressElement && items.length && overlay && confirmButton && closeButton) {
+  if (
+    locationBlock &&
+    popup &&
+    cityElement &&
+    addressElement &&
+    items.length &&
+    overlay &&
+    confirmButton &&
+    closeButton
+  ) {
     const togglePopup = (isOpen) => {
       if (isOpen) {
         overlay.style.display = "block";
@@ -72,81 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
         popup.contains(e.target) || locationBlock.contains(e.target);
       if (!isInsidePopup) togglePopup(false);
     });
-  }
-});
-
-/* Slider */
-
-import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
-
-const swiperElement = document.querySelector(".swiper");
-if (swiperElement) {
-  const swiper = new Swiper(".swiper", {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    slidesPerGroup: 1,
-    speed: 600,
-    navigation: {
-      nextEl: ".popular-products__nav-btn--next",
-      prevEl: ".popular-products__nav-btn--prev",
-    },
-  });
-
-  const prevButton = document.querySelector(".popular-products__nav-btn--prev");
-  const nextButton = document.querySelector(".popular-products__nav-btn--next");
-
-  if (prevButton && nextButton) {
-    function updateButtonState() {
-      if (swiper.isBeginning) {
-        prevButton.classList.add("is-disabled");
-        prevButton.classList.remove("is-active");
-      } else {
-        prevButton.classList.remove("is-disabled");
-        prevButton.classList.add("is-active");
-      }
-
-      if (swiper.isEnd) {
-        nextButton.classList.add("is-disabled");
-        nextButton.classList.remove("is-active");
-      } else {
-        nextButton.classList.remove("is-disabled");
-        nextButton.classList.add("is-active");
-      }
-    }
-
-    updateButtonState();
-
-    swiper.on("slideChange", () => {
-      updateButtonState();
-    });
-  }
-}
-
-/* Checkbox */
-
-document.addEventListener("DOMContentLoaded", () => {
-  const checkboxInput = document.querySelector(
-    ".form-container__checkbox__input"
-  );
-  const checkboxLabel = document.querySelector(
-    ".form-container__checkbox__label"
-  );
-
-  if (checkboxInput && checkboxLabel) {
-    function updateCheckboxState() {
-      if (checkboxInput.checked) {
-        checkboxLabel.classList.add("checked");
-      } else {
-        checkboxLabel.classList.remove("checked");
-      }
-    }
-
-    checkboxInput.addEventListener("change", () => {
-      updateCheckboxState();
-    });
-
-    updateCheckboxState();
   }
 });
 
@@ -234,7 +168,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const fileInput = document.getElementById("fileInput");
   const fileInfoText = document.querySelector(".form-container__file-info");
   const fileLabel = document.querySelector('label[for="fileInput"]');
-  const uploadWrapper = document.querySelector(".form-container__upload-wrapper");
+  const uploadWrapper = document.querySelector(
+    ".form-container__upload-wrapper"
+  );
   const maxFileSize = 25 * 1024 * 1024;
 
   if (fileInput && fileInfoText && fileLabel && uploadWrapper) {
@@ -244,8 +180,12 @@ document.addEventListener("DOMContentLoaded", () => {
       fileInfoText.style.color = "";
       fileLabel.textContent = "Выбрать файл";
 
-      const uploadIcon = uploadWrapper.querySelector(".form-container__file--upload");
-      const deleteIcon = uploadWrapper.querySelector(".form-container__file--delete");
+      const uploadIcon = uploadWrapper.querySelector(
+        ".form-container__file--upload"
+      );
+      const deleteIcon = uploadWrapper.querySelector(
+        ".form-container__file--delete"
+      );
       if (uploadIcon) uploadIcon.remove();
       if (deleteIcon) deleteIcon.remove();
 
@@ -263,7 +203,9 @@ document.addEventListener("DOMContentLoaded", () => {
           fileInfoText.style.color = "#ff4d4f";
           fileInput.value = "";
         } else {
-          const clipIcon = uploadWrapper.querySelector(".form-container__icon--clip");
+          const clipIcon = uploadWrapper.querySelector(
+            ".form-container__icon--clip"
+          );
           if (clipIcon) clipIcon.remove();
 
           const uploadIcon = document.createElement("span");
@@ -395,11 +337,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (phoneInput) {
       mask.updateValue("");
     }
-    
+
     if (fileInput && fileInfoText && fileLabel && uploadWrapper) {
       resetFileInput();
     }
-    
+
     openModal();
   });
 });

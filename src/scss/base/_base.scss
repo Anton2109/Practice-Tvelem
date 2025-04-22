@@ -4,8 +4,14 @@ html {
 }
 
 body {
-	background-color: rgb(182, 182, 182, 0.5);
-	width: 1440px;
-	margin: 0 auto;
-	overflow-y: scroll;
+  background-color: rgba(182, 182, 182, 0.5);
+  width: 100%;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
 }

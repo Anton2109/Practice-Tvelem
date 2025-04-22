@@ -8,8 +8,8 @@
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 
-	<body>
-		<main class="container">
+	<body class="page-index">
+		<div class="container">
 			<section class="hero-section">
 				<div class="hero-container">
 					<header class="main-header">
@@ -147,26 +147,32 @@
 						</div>
 					</div>
 				</div>
+
 				<div class="contacts">
 					<div class="contacts__container">
-						<p class="contacts__description">
-							Чтобы оформить заказ или получить консультацию, свяжитесь с&#160;нами любым удобным для Вас способом
-						</p>
+						<div class="contacts">
+							<div class="contacts__container">
+								<p class="contacts__description">
+									Чтобы оформить заказ или получить консультацию, свяжитесь с&#160;нами любым удобным для Вас способом
+								</p>
 
-						<div class="contacts__divider"></div>
+								<div class="contacts__divider"></div>
 
-						<div class="contacts__items">
-							<div class="contacts__item contacts__phone">
-								+7&#160;905&#160;164-14-41
-							</div>
-							<div class="contacts__item contacts__email">
-								info@tvelem.ru
+								<div class="contacts__items">
+									<a href="#" class="contacts__item contacts__phone">
+										+7&#160;905&#160;164-14-41
+									</a>
+
+									<a href="#" class="contacts__item contacts__email">
+										info@tvelem.ru
+									</a>
+								</div>
+
+								<button class="contacts__button button--primary">
+									Отправить запрос
+								</button>
 							</div>
 						</div>
-
-						<button class="contacts__button button--primary">
-							Отправить запрос
-						</button>
 					</div>
 				</div>
 			</section>
@@ -195,7 +201,7 @@
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="popular-products__item">
-									<a href="#" class="popular-products__card popular-products__card--sld1">
+									<a href="product-card.html" class="popular-products__card popular-products__card--sld1">
 										<div class="popular-products__icon"></div>
 										<span class="popular-products__name">Датчик токов утечки SLD13K-100mА</span>
 										<div class="popular-products__footer">
@@ -208,7 +214,7 @@
 
 							<div class="swiper-slide">
 								<div class="popular-products__item">
-									<a href="#" class="popular-products__card popular-products__card--sld2">
+									<a href="product-card.html" class="popular-products__card popular-products__card--sld2">
 										<div class="popular-products__icon"></div>
 										<span class="popular-products__name">Датчик токов утечки SLD2-20mА</span>
 										<div class="popular-products__footer">
@@ -221,7 +227,7 @@
 
 							<div class="swiper-slide">
 								<div class="popular-products__item">
-									<a href="#" class="popular-products__card popular-products__card--sld3">
+									<a href="product-card.html" class="popular-products__card popular-products__card--sld3">
 										<div class="popular-products__icon"></div>
 										<span class="popular-products__name">Датчик токов утечки SLD13D-100mA</span>
 										<div class="popular-products__footer">
@@ -234,7 +240,7 @@
 
 							<div class="swiper-slide">
 								<div class="popular-products__item">
-									<a href="#" class="popular-products__card popular-products__card--sld4">
+									<a href="product-card.html" class="popular-products__card popular-products__card--sld4">
 										<div class="popular-products__icon"></div>
 										<span class="popular-products__name">Датчик токов утечки SLD2-20mА</span>
 										<div class="popular-products__footer">
@@ -381,13 +387,13 @@
 										Бесплатно консультируем по&#160;всем вопросам, связанным с&#160;нашей продукцией!
 									</p>
 
-									<div class="form-container__contact">
+									<a href="#" class="form-container__contact">
 										+7&#160;905&#160;164-14-41
-									</div>
+									</a>
 
-									<div class="form-container__contact">
+									<a href="#" class="form-container__contact">
 										info@tvelem.ru
-									</div>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -400,7 +406,7 @@
 							</div>
 
 							<div class="form-container__field">
-								<input class="form-container__input" placeholder="Телефон*" type="text" name="phone" required />
+								<input class="form-container__input form-container__input--phone" placeholder="Телефон*" type="text" name="phone" id="formPhone" required />
 							</div>
 
 							<div class="form-container__field">
@@ -415,6 +421,7 @@
 								<div class="form-container__upload-wrapper">
 									<input type="file" class="form-container__button--file" style="display: none;" id="fileInput" />
 									<label for="fileInput" class="form-container__button--file">Выбрать файл</label>
+									<span class="form-container__icon form-container__icon--clip"></span>
 								</div>
 
 								<p class="form-container__file-info">Можно прикрепить к&#160;форме файл до&#160;25 МБ</p>
@@ -432,61 +439,75 @@
 							<button class="form-container__submit-button" type="submit">Отправить заявку</button>
 						</form>
 					</div>
-				</div>
-			</section>
-		</main>
-		<div class="footer">
-			<div class="footer__logo">
-				<div class="footer__logo-img"></div>
-			</div>
 
-			<div class="footer__company">
-				<div class="footer__company-info">
-					<p class="footer__company-info-item">ООО&#160;&#171;Твелем&#187;</p>
-					<p class="footer__company-info-item">ИНН: 6900002442</p>
-					<p class="footer__company-info-item">ОГРН: 1236900012040</p>
-				</div>
-
-				<div class="footer__contacts">
-					<div class="footer__contact">
-						<span class="footer__icon footer__icon--location"></span>
-						<span class="footer__contact-text">Тверь ул.&#160;Макарова, д.&#160;91, пом.2</span>
-					</div>
-
-					<div class="footer__contact">
-						<span class="footer__icon footer__icon--clock"></span>
-						<span class="footer__contact-text">Пн-Чт с&#160;09.00 до&#160;18.00 | Пт&#160;с&#160;09.00 до&#160;17.00</span>
-					</div>
-
-					<div class="footer__contact">
-						<div class="footer__contact-wrapper">
-							<span class="footer__icon footer__icon--phone"></span>
-							<span class="footer__contact-text">+7&#160;905&#160;164-14-41</span>
-
-							<span class="footer__icon footer__icon--email"></span>
-							<span class="footer__contact-text">info@tvelem.ru</span>
+					<div class="modal" id="successModal">
+						<div class="modal__content">
+							<div class="modal__content--wrapper">
+								<h2 class="modal__title">Ваша заявка отправлена</h2>
+								<span class="modal__close--icon"></span>
+							</div>
+							<div class="modal__text-wrapper">
+								<p class="modal__text">Мы&#160;уже получили вашу заявку, и&#160;в&#160;ближайшее время</p>
+								<p class="modal__text modal__text--centered">свяжемся с&#160;вами!</p>
+							</div>
 						</div>
 					</div>
 				</div>
+			</section>
 
-				<div class="footer__products">
-					<a href="#!" class="footer__product-link">Элементы для шкафов оперативного тока</a>
-					<a href="#!" class="footer__product-link">Датчики токов утечки</a>
-					<a href="#!" class="footer__product-link">Токовые пробники</a>
+			<div class="footer">
+				<div class="footer__logo">
+					<div class="footer__logo-img"></div>
 				</div>
 
-				<div class="footer__links">
-					<a href="#!" class="footer__link">Статьи</a>
-					<a href="#!" class="footer__link">Гарантии</a>
+				<div class="footer__company">
+					<div class="footer__company-info">
+						<p class="footer__company-info-item">ООО&#160;&#171;Твелем&#187;</p>
+						<p class="footer__company-info-item">ИНН: 6900002442</p>
+						<p class="footer__company-info-item">ОГРН: 1236900012040</p>
+					</div>
+
+					<div class="footer__contacts">
+						<div class="footer__contact">
+							<span class="footer__icon footer__icon--location"></span>
+							<span class="footer__contact-text">Тверь ул.&#160;Макарова, д.&#160;91, пом.2</span>
+						</div>
+
+						<div class="footer__contact">
+							<span class="footer__icon footer__icon--clock"></span>
+							<span class="footer__contact-text">Пн-Чт с&#160;09.00 до&#160;18.00 | Пт&#160;с&#160;09.00 до&#160;17.00</span>
+						</div>
+
+						<div class="footer__contact">
+							<div class="footer__contact-wrapper">
+								<span class="footer__icon footer__icon--phone"></span>
+								<a href="#" class="footer__contact-text">+7&#160;905&#160;164-14-41</a>
+
+								<span class="footer__icon footer__icon--email"></span>
+								<a href="#" class="footer__contact-text">info@tvelem.ru</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer__products">
+						<a href="#!" class="footer__product-link">Элементы для шкафов оперативного тока</a>
+						<a href="#!" class="footer__product-link">Датчики токов утечки</a>
+						<a href="#!" class="footer__product-link">Токовые пробники</a>
+					</div>
+
+					<div class="footer__links">
+						<a href="#!" class="footer__link">Статьи</a>
+						<a href="#!" class="footer__link">Гарантии</a>
+					</div>
+				</div>
+
+				<div class="footer__legal">
+					<p class="footer__legal-item">&#169; ООО&#160;&#171;Твелем&#187; 2024</p>
+					<p class="footer__legal-item">Политика конфиденциальности</p>
+					<p class="footer__legal-item">Сделано в&#160;DSML</p>
 				</div>
 			</div>
-
-			<div class="footer__legal">
-				<p class="footer__legal-item">&#169; ООО&#160;&#171;Твелем&#187; 2024</p>
-				<p class="footer__legal-item">Политика конфиденциальности</p>
-				<p class="footer__legal-item">Сделано в&#160;DSML</p>
-			</div>
+			<script src="./js/index.bundle.js"></script>
 		</div>
-		<script src="./js/index.bundle.js"></script>
 	</body>
 </html>

@@ -1,0 +1,121 @@
+.product-card {
+  margin-bottom: 60px;
+  &__container {
+    max-width: 1180px;
+    margin: 0 130px;
+  }
+
+  &__main {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #fff;
+    width: 480px;
+    height: 635px;
+    border-radius: 25px;
+  }
+
+  &__image {
+    width: 190px;
+    height: 240px;
+  }
+
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: #333;
+    font-family: "Gilroy", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 40px;
+  }
+
+  &__specs {
+    margin-bottom: 30px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+}
+
+.specs-list {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 0;
+    border-bottom: 1px solid rgb(33, 33, 33, 0.25);
+
+    &:last-child {
+      border-bottom: none;
+      padding: 0;
+    }
+  }
+
+  &__name {
+    width: 70%;
+    color: #333;
+    font-family: "Gilroy", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &__value {
+    color: rgb(39, 47, 106);
+    font-family: "Gilroy", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+
+    width: 30%;
+    text-align: left;
+  }
+}
+
+.product-card__button {
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  padding: 14px 30px;
+
+  &--primary {
+    color: #fff;
+    border-radius: 45px;
+    background-color: rgb(39, 47, 106);
+    border: 1px solid rgb(39, 47, 106);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      color: rgb(39, 47, 106);
+      background-color: #fff;
+    }
+  }
+
+  &--secondary {
+    color: rgb(39, 47, 106);
+    border-radius: 45px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      color: #fff;
+      background-color: rgb(39, 47, 106);
+    }
+  }
+}

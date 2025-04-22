@@ -10,39 +10,44 @@
 
 </head>
 
-<body>
-	<main class="container">
+<body class="page-index">
+	<div class="container">
 
 		<section class="hero-section">
 
 			<div class="hero-container">
-				@@include('blocks/hero-section/header.html')
-				@@include('blocks/hero-section/hero-content.html')
+			  @@include('blocks/index-page/hero-section/header.html')
+			  @@include('blocks/index-page/hero-section/hero-content.html')
+			</div>
+
+			<div class="contacts">
+
+			  <div class="contacts__container">
+				@@include('blocks/index-page/hero-section/hero-contacts.html')
+			  </div>
 
 			</div>
-			@@include('blocks/hero-section/hero-contacts.html')
-
-		</section>
+		  </section>
 
 		<section class="popular-products">
-			@@include('blocks/popular-products/index.html')
+			@@include('blocks/index-page/popular-products/index.html')
 		</section>
 
 		<section class="benefit">
-			@@include('blocks/section-benefit/benefit.html')
+			@@include('blocks/index-page/section-benefit/benefit.html')
 		</section>
 
 		<section class="section-product-application">
-			@@include('blocks/product-application/index.html')
+			@@include('blocks/index-page/product-application/index.html')
 		</section>
 
 		<section class="form">
-			@@include('blocks/section-form/index.html')
+			@@include('blocks/index-page/section-form/index.html')
 		</section>
 
-	</main>
-	@@include('blocks/footer/footer.html')
-	<script src="./js/index.bundle.js"></script>
+		@@include('blocks/index-page/footer/footer.html')
+		<script src="./js/index.bundle.js"></script>
+	</div>
 </body>
 
 </html>

@@ -1,0 +1,46 @@
+.page-product-card {
+
+  .main-header {
+    color: #333;
+    margin-bottom: 140px;
+    
+    &__phone-link {
+      color: #333;
+    }
+    
+    &__menu-link {
+      color: #333;
+      
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+    
+    &__city,
+    &__address {
+      color: #333;
+    }
+  } 
+
+  .main-header__icon {
+    &--pin {
+      background-image: url("../../../img/product-card/blackLocation.svg");
+    }
+    
+    &--arrow {
+      background-image: url("../../../img/product-card/blackArrow.svg");
+    }
+    
+    &--search {
+      background-image: url("../../../img/product-card/blackSearch.svg");
+    }
+    
+    &--close {
+      background-image: url("../../../img/product-card/blackClose.svg");
+    }
+  }
+  
+  .main-header__logo-img {
+    background-image: url("../../../img/product-card/blackLogo.svg");
+  }
+}
